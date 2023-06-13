@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+:root{
+  --primary-color: #3C486B;
+  --secondary-color: #F0F0F0;
+  --third-color: #F9D949;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+  background-color: var(--primary-color);
+}
+
+.container{
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+}
+
+.card-recipe{
+  position: relative;
+  background-color: var(--secondary-color);
+  width: 80vmin;
+  border-radius: 8px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3),
+  0 10px 20px rgba(255, 255, 255, 0.15);
+  padding: 26px;
+}
+
+.card-recipe .recipe-search{
+  display: grid;
+  grid-template-columns: 9fr 3fr;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.card-recipe .recipe-search .search-input{
+  padding: 8px 10px;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid var(--primary-color);
+  background: transparent;
+}
+
+.card-recipe .recipe-search .search-btn{
+  border: none;
+  border-radius: 3px;
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.card-recipe .recipe-search .search-btn:hover{
+  filter: opacity(0.8);
+}
+
+.card-recipe .recipe-profile{
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.card-recipe .recipe-profile .profile-img{
+  position: relative;
+  width: 180px;
+  z-index: 99;
+}
+
+.card-recipe .recipe-profile .profile-name{
+  position: relative;
+  font-size: 14px;
+  width: 100%;
+  background-color: var(--primary-color);
+  padding: 6px 0;
+  color: white;
+  margin-top: -15px;
+  z-index: 999;
+  border-radius: 2px;
+}
+
+.card-recipe .recipe-ingrediant{
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 10px 10px;
+  padding: 0 24px 0px 20px;
+}
+
+.card-recipe .recipe-btn{
+  display: block;
+  padding: 8px 16px;
+  margin-left: auto;
+  margin-top: 16px;
+  border: 2px solid var(--primary-color);
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.15s ease 0s;
+}
+
+.card-recipe .recipe-instruction{
+  position: absolute;
+  background-color: var(--secondary-color);
+  padding: 26px;
+  width: 100%;
+  border-radius: 8px;
+  top: 0;
+  left: 0;
+  min-height: 100%;
+  z-index: 9999;
+}
+
+.card-recipe .recipe-instruction .instruction-text{
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  line-height: 25px;
+  text-align: justify;
+  margin: 5px 0;
+  font-size: 12px;
+}
+
+.card-recipe .recipe-instruction .instruction-close{
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 5px 8px;
+  border: 1px solid white;
+  border-radius: 8px;
+  background-color: #3C486B;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: filter 0.15s ease 0s;
+}
+
+.card-recipe .recipe-instruction .instruction-close:hover{
+  filter: opacity(0.8);
+}
+
+.card-recipe .recipe-btn:hover{
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.fade{
+  display: none;
+}
+
+@media (width < 900px){
+  .card-recipe{
+    font-size: 14px;
+  }
+}
